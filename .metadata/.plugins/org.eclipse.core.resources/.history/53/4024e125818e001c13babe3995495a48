@@ -1,0 +1,63 @@
+package com.levisantos009.question.two; 
+import java.util.ArrayList;
+import java.util.regex.*;
+
+public class Senha {
+	
+	private static String regexDigito;
+	private static String regexMaiscula;
+	private static String regexMinuscula;
+	private static String regexSimbolos;
+	private static Pattern pattern;
+	private static Matcher matcher;
+	private static ArrayList<String> erros;
+	
+	public Senha() {
+		erros = new ArrayList<String>();
+		regexDigito = "[0-9]";
+		regexMaiscula = "[A-Z]";
+		regexMinuscula = "[a-z]";
+		
+	}
+	
+	public Matcher regex(String padrao, String alvo) {
+		pattern = Pattern.compile(padrao);
+		return pattern.matcher(alvo);
+		
+	}
+	
+	public void verificaSenha(String senha) {
+		System.out.println(regex(regexDigito, senha));
+
+	}
+	
+	
+	private static void verificaTamanho(String senha) {
+		
+	}
+	
+	private static void verificaDigito(String senha) {
+		
+		
+		
+	}
+	
+	private static void verificaCaracteresUpper(String senha) {
+		
+		
+	}
+	
+	private static void verificaCaracteresLower(String senha) {
+					
+		
+		
+	}
+	
+	
+	public void verResultado() {
+		for (int i = 0; i < erros.size(); i++) {
+			System.err.println(erros.get(i));
+		}
+	}
+	
+}

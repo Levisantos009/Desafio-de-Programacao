@@ -1,0 +1,71 @@
+package com.levisantos009.question.two; 
+import java.util.ArrayList;
+import java.util.regex.*;
+
+public class Senha {
+	
+	private static String regexDigito;
+	private static String regexMaiscula;
+	private static String regexMinuscula;
+	private static String regexSimbolos;
+	private static Pattern pattern;
+	private static Matcher matcher;
+	private static ArrayList<String> erros;
+	
+	public Senha() {
+		erros = new ArrayList<String>();
+		regexDigito = "[0-9]";
+		regexMaiscula = "[A-Z]";
+		regexMinuscula = "[a-z]";
+		regexSimbolos = "[!@#$%^&*()-+]";
+		
+	}
+	
+	public static boolean regex(String padrao, String alvo) {
+		pattern = Pattern.compile(padrao);
+		matcher = pattern.matcher(alvo);
+		return matcher.find();
+	}
+	
+	public void verificaSenha(String senha) {
+		verificaTamanho(senha);
+	}
+	
+	
+	private static void verificaTamanho(String senha) {
+		if (senha.length() >= 6) {
+			verificaDigito(senha);
+		} else {
+			erros.add("Sua senha deve ter no mínimo 6 caracteres");
+			verificaDigito(senha);
+		}
+	}
+	
+	private static void verificaDigito(String senha) {
+		if (regex(regexDigito, senha)) {
+			verificaCaracteresUpper(senha);
+		} else {
+			erros.add("Sua senha deve ter no mínimo 1 dígito número");
+			verificaCaracteresUpper(senha);
+		}
+	}
+	
+	private static void verificaCaracteresUpper(String senha) {
+		
+		
+	}
+	
+	private static void verificaCaracteresLower(String senha) {
+					
+		
+		
+	}
+	
+	
+	public void verResultado() {
+		for (int i = 0; i < erros.size(); i++) {
+			System.err.println(erros.get(i));
+		}
+	}
+	
+}

@@ -1,0 +1,26 @@
+package com.levisantos009.question.zthree;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Scanner;
+
+import org.junit.jupiter.api.Test;
+
+class TesteAnagrama {
+
+	@Test
+	public void TestaSenha() {
+		Scanner read = new Scanner(System.in);
+			
+			System.out.print("Digite uma palavra:");
+			String user = read.nextLine(); 
+		
+			
+			Anagrama anagrama = new Anagrama();
+			
+			
+			
+		read.close();
+	}
+
+}

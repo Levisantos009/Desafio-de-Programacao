@@ -1,0 +1,42 @@
+package com.levisantos009.question.zthree;
+
+import javax.swing.JOptionPane;
+
+public class x {
+
+	public static void main(String[] args) {
+		String palavra = JOptionPane.showInputDialog("Digite a palavra");
+		String palavraStr =  Integer.toString(anagramas(palavra));
+		JOptionPane.showMessageDialog(null, palavraStr);
+		System.out.println(anagramas(palavra));
+	}
+
+	static int anagramas(String palavra) {
+		int anagramas = 0;
+		int cont = 0;
+		char[] array = palavra.toCharArray();
+
+		for (int i = 0; i < array.length; i++) {
+			String pos1 = Character.toString(array[i]);
+			char posicao1 = pos1.charAt(0);
+			cont = 0;
+			for (int j = 0; j < array.length; j++) {
+				String pos2 = Character.toString(array[j]);
+				char posicao2 = pos2.charAt(0);
+				if (posicao1 == posicao2) {
+				cont++;
+				}
+				if(cont >= 2) {
+					anagramas++;
+					cont = 0;
+					if (i + 1 != j) {
+						anagramas++;
+					}
+				}
+				
+			}
+		}
+		return anagramas/2;
+	}
+
+}

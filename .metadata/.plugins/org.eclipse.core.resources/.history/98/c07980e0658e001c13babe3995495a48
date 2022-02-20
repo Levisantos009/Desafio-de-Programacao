@@ -1,0 +1,33 @@
+package com.levisantos009.question.one;
+
+import java.util.Scanner;
+
+public class Arvore {
+	
+	
+	@SuppressWarnings("unused")
+	public void montaArvore() {
+		Scanner read = new Scanner(System.in);
+		
+		System.out.print("Digite o valor de N:");
+		int n = read.nextInt();
+		
+		int j = n;
+		String repeated;
+		
+			for(int i = 1; i < n + 1; i ++) {
+				repeated = new String(new char[i]).replace("\0", "*");
+				j--;
+				String space = "%-" + j + "s";
+				if (j == 0) {
+					System.out.println(repeated);
+				} else {
+					System.out.println(String.format(space, "") + repeated);					
+				}
+			}
+		
+		read.close();
+	}
+	
+	
+}

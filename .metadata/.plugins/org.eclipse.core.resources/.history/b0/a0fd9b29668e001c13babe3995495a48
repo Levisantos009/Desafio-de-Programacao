@@ -1,0 +1,15 @@
+package com.levisantos009.question.one;
+
+import java.util.Scanner;
+
+public class backup {
+	public static void main(String[] args) {
+		
+		Scanner read = new Scanner(System.in);
+		
+		Arvore capgemini = new Arvore();
+		int teste = capgemini.montaArvore();
+		
+		read.close();
+	}
+}

@@ -1,0 +1,62 @@
+package com.levisantos009.question.two; 
+import java.util.ArrayList;
+import java.util.regex.*;
+
+public class Senha {
+	
+	private static String regex;
+	private static Pattern pattern;
+	private static Matcher matcher;
+	private static ArrayList<String> erros;
+	
+	public Senha() {
+		erros = new ArrayList<String>();
+		regex = "";
+		pattern = Pattern.compile(regex);
+	}
+	
+	public String verificaSenha(String senha) {
+	
+		verificaTamanho(senha);
+		
+		return senha;
+	}
+	
+	
+	private static void verificaTamanho(String senha) {
+		if (senha.length() >= 6) {
+			verificaDigito(senha);
+		}
+		erros.add("Sua senha não pode ter menos que 6 caracteres!");
+		
+	}
+	
+	private static void verificaDigito(String senha) {
+		regex = "[0-9]";
+		matcher = pattern.matcher(senha);
+		
+		if (matcher.find()) {
+			verificaCaracteres(senha);
+		}
+		erros.add("Sua senha deve conter pelo menos 1 dígito númerico.");
+		
+	}
+	
+	private static void verificaCaracteres(String senha) {
+		regex = "[!@#$%^&*()-+]|[A-Z][a-z]|[a-z][A-Z]";
+		matcher = pattern.matcher(senha);
+		
+		if(matcher.find()) {
+			
+		}
+		erros.add("Sua senha deve conter pelo menos 1 letra maiúscula.");
+		
+	}
+	
+	public void verResultado() {
+		for (int i = erros.size(); i < erros.size(); i--) {
+			System.err.println(erros.get(i));
+		}
+	}
+	
+}

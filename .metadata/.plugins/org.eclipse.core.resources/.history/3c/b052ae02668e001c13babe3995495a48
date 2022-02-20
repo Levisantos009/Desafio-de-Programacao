@@ -1,0 +1,11 @@
+package com.levisantos009.question.one;
+
+public class backup {
+	public static void main(String[] args) {
+		
+		Arvore c = new Arvore();
+		int teste = c.montaArvore();
+		System.out.println(teste);
+	
+	}
+}

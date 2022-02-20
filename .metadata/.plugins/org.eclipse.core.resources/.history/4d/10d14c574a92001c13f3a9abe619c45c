@@ -1,0 +1,48 @@
+package com.levisantos009.question.zthree;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class teste2 {
+	
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+				
+		ArrayList<String> chars = new ArrayList<>();
+		
+		System.out.print("Digite a palavra:");
+		String user = read.nextLine();
+		
+		user = user.replaceAll("\\s+", "");
+		
+		int anagramas = 0;
+		int pares = 0;	
+			
+		for (int i = 0; i < user.length(); i++) {
+			pares = 0;
+			
+			for (int j = 0; j < user.length(); j++) {
+					
+				if (user.charAt(i) == user.charAt(j)) {
+					pares ++;
+					
+					if (pares >= 2) { 
+						anagramas ++;
+						pares = 0;
+						
+						(i + 1 != j ? anagramas++ : "s");
+					}
+				}	
+			}
+		}
+			
+		System.out.println(chars);
+		System.out.println(anagramas / 2);
+		
+		
+		
+		
+		read.close();
+	}
+		
+}

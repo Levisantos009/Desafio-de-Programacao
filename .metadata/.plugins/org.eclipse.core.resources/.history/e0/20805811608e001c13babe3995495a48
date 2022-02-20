@@ -1,0 +1,30 @@
+package com.levisantos009.question.one;
+
+import java.util.Scanner;
+
+public class Arvore {
+	public static void main(String[] args) {
+		
+		Scanner read = new Scanner(System.in);
+		
+		System.out.print("Digite o valor de N:");
+		int n = read.nextInt();
+		
+		int i = 0;
+		String repeated;
+		
+		do {
+			String space = "%-" + n + "s";
+			repeated = new String(new char[n]).replace("\0", "*");		
+			System.out.println(String.format(space, "") + repeated);				
+			n--;
+						
+		} while(n > i); 
+		
+		
+		
+		
+		read.close();
+	
+	}
+}

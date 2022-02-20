@@ -1,0 +1,40 @@
+package com.levisantos009.question.zthree;
+
+import java.util.Scanner;
+
+import org.junit.jupiter.api.Test;
+
+class TesteAnagrama {
+	
+	/*
+	 *  ATENÇÃO AVALIADOR!!!! 
+	 *  ESSA QUESTÃO DEVERIA SER ANULADA
+	 *  O PRIMEIRO ENUNCIADO QUE FOI POSTADO
+	 *  TINHA COMO SAÍDA 3 O TOTAL DE ANAGRAMAS
+	 *  DA PALAVRA "OVO", E DEPOIS FOI TROCADO PARA
+	 *  2 SEM AVISO AOS PARTICIPANTES ATÉ A DATA DE 20/02/2022.
+	 *  
+	 *  SE EU NÃO TIVESSE ENTRADO NOVAMENTE NO SITE
+	 *  TERIA ENVIADO O DESAFIO ERRADO SEM SABER.
+	 *  
+	 *  TENHO SALVO OS DOIS PDF´S O PRIMEIRO E QUE FOI ATUALIZADO
+	 *  
+	 *  
+	 *  LEVI A. N. DOS SANTOS*/
+
+	@Test
+	public void TestaSenha() {
+		Scanner read = new Scanner(System.in);
+			
+			System.out.print("Digite uma palavra:");
+			String user = read.nextLine(); 
+		
+			
+			
+			
+			
+			
+		read.close();
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.levisantos009.question.two;
+
+import java.util.ArrayList;
+
+public class teste {
+
+	public static void main(String[] args) {
+		
+		Senha s = new Senha();
+
+		s.verificaSenha("Levi!");
+		
+		ArrayList<String> erros = new ArrayList<>();
+		
+		erros.add("Oi");
+		System.out.println(erros);
+	}
+
+}

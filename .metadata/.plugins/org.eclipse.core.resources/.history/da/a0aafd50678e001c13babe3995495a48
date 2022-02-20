@@ -1,0 +1,13 @@
+package com.levisantos009.question.one;
+
+import org.junit.jupiter.api.Test;
+
+class TesteArvore {
+
+	@Test
+	public void testaArvore() {
+		Arvore capgemini = new Arvore();
+		int teste = capgemini.montaArvore(n);
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.levisantos009.question.one;
+
+import java.util.Scanner;
+
+public class backup {
+	public static void main(String[] args) {
+		
+		Scanner read = new Scanner(System.in);
+		
+		System.out.print("Digite o valor de N:");
+		int n = read.nextInt();
+				
+		Arvore capgemini = new Arvore();
+		int teste = capgemini.montaArvore(n);
+		
+		read.close();
+	}
+}

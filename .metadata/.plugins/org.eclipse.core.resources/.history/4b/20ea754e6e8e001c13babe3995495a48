@@ -1,0 +1,10 @@
+package com.levisantos009.question.two;
+
+public class main {
+	
+	public static void Main(String[] args) {
+		Senha s = new Senha();
+		
+		s.verificaSenha("Levi1!");
+	}
+}

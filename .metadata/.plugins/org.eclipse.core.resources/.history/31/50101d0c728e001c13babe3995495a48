@@ -1,0 +1,15 @@
+package com.levisantos009.question.two;
+
+public class teste {
+
+	public static void main(String[] args) {
+		
+		Senha s = new Senha();
+		boolean isNumeric =  str.matches("[+-]?\\d*(\\.\\d+)?");
+        System.out.println(isNumeric);
+
+		//s.verificaSenha("Levi1!");
+
+	}
+
+}

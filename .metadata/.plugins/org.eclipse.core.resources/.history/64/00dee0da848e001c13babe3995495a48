@@ -1,0 +1,12 @@
+package com.levisantos009.question.two;
+
+import org.junit.jupiter.api.Test;
+
+class TesteSenha {
+
+	@Test
+	public void TestaSenha() {
+		
+	}
+
+}

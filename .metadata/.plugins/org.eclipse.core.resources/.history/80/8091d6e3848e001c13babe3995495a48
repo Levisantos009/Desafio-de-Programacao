@@ -1,0 +1,22 @@
+package com.levisantos009.question.two;
+
+import java.util.Scanner;
+
+import org.junit.jupiter.api.Test;
+
+class TesteSenha {
+
+	@Test
+	public void TestaSenha() {
+		Scanner read = new Scanner(System.in);
+			
+			System.out.print("Digite sua senha:");
+			String pass = read.next();
+		
+			@SuppressWarnings("unused")
+			Senha senha = new Senha(pass);
+
+		read.close();
+	}
+
+}

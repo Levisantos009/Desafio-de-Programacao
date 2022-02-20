@@ -1,0 +1,19 @@
+package com.levisantos009.question.zthree;
+
+import java.util.Scanner;
+
+public class xz {
+
+	public static void main(String[] args) {
+		Scanner read = new Scanner(System.in);
+		
+			Anagrama a = new Anagrama();
+		
+			System.out.print("Digite uma palavra:");
+			String user = read.nextLine(); 
+			
+			
+		read.close();
+	}
+	
+}

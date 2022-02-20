@@ -1,0 +1,21 @@
+package com.levisantos009.question.zthree;
+
+import java.util.Scanner;
+
+public class teste {
+
+	public static void main(String[] args) {
+		
+		Anagrama a = new Anagrama();
+		
+		Scanner read = new Scanner(System.in);
+		String user = read.next(); 
+		
+		a.VerificaAnagrama(user);
+		
+			
+		
+		read.close();
+	}
+	
+}

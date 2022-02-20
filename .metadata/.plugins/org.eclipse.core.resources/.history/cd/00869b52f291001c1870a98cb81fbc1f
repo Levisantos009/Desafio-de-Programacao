@@ -1,0 +1,41 @@
+package com.levisantos009.question.zthree;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Anagrama {
+	
+	private int anagramas, pares;
+	private ArrayList<String> chars;
+	
+	public Anagrama() {
+		this.anagramas = 0;
+		this.pares = 0;
+		this.chars = new ArrayList<String>();
+	}
+	
+	public void verificaAnagrama(String user) {
+		
+		user = user.replaceAll("\\s+", "");
+			
+		for (int i = 0; i < user.length(); i++) {
+			pares = 0;
+			
+			for (int j = 0; j < user.length(); j++) {
+					
+				if (user.charAt(i) == user.charAt(j)) {
+					pares ++;
+					
+					if (pares >= 2) { 
+						anagramas ++;
+						pares = 0;
+					}
+				}	
+			}
+		}
+	
+	}
+}
+		
+		
+}

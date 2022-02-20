@@ -1,0 +1,61 @@
+package com.levisantos009.question.zthree;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
+import java.util.Scanner;
+
+import org.junit.jupiter.api.Test;
+
+import junit.framework.Assert;
+
+class TesteAnagrama {
+	
+	/*
+	 *  ATENÇÃO AVALIADOR!!!! 
+	 *  ESSA QUESTÃO DEVERIA SER ANULADA
+	 *  O PRIMEIRO ENUNCIADO QUE FOI POSTADO
+	 *  TINHA COMO SAÍDA 3 O TOTAL DE ANAGRAMAS
+	 *  DA PALAVRA "OVO", E DEPOIS FOI TROCADO PARA
+	 *  2 SEM AVISO AOS PARTICIPANTES ATÉ A DATA DE 20/02/2022.
+	 *  
+	 *  SE EU NÃO TIVESSE ENTRADO NOVAMENTE NO SITE
+	 *  TERIA ENVIADO O DESAFIO ERRADO SEM SABER.
+	 *  
+	 *  MUITOS CANDIDATOS IRÃO ERRAR CASO 
+	 *  NÃO TENHAM ATUALIZADO SEUS ALGORITMOS.
+	 *  
+	 *  TENHO SALVO OS DOIS PDF´S O PRIMEIRO E O QUE FOI ATUALIZADO
+	 *  
+	 *  PRIMEIRO PDF DISPONIBILIZADO AOS PARTICIPANTES 14/02/2022
+	 *  SAÍDA DA PALAVRA "OVO" = 3
+	 *  https://drive.google.com/file/d/1VeN3Ip5EcDAtkn9Mxl7bq2J6LSo2C1GT/view?usp=sharing
+	 *  
+	 *  PDF QUE FOI ATUALIZADO SEM AVISO NENHUM E ESTÁ DISPONÍVEL ATÉ A DATA DE 
+	 *  20/02/2022 
+	 *  SAÍDA DA PALAVRA "OVO" = 2
+	 *  https://drive.google.com/file/d/1SEXkb3zedzVJG4K-XU-R8UJqvOsgRnAu/view?usp=sharing
+	 *  
+	 *  LEVI A. N. DOS SANTOS*/
+
+	@Test
+	public void TestaSenha() {
+		Scanner read = new Scanner(System.in);
+			
+			System.out.print("Digite uma palavra:");
+			String user = read.nextLine(); 
+		
+			if (user == "ovo") {
+				System.out.println("entrei");			
+			}
+			
+			Anagrama a = new Anagrama();
+			
+			int resultado = a.verificaAnagrama(user);
+			System.out.println(resultado);
+			System.out.println(user);	
+			
+		read.close();
+	}
+
+}
